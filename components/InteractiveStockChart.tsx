@@ -107,8 +107,8 @@ export const InteractiveStockChart: FC<InteractiveStockChartProps> = ({
     <Card className='w-full'>
       <CardHeader className='flex flex-col items-stretch space-y-0 border-b p-0 sm:flex-row'>
         <div className='flex flex-1 flex-col justify-center gap-1 px-6 py-5 sm:py-6'>
-          <CardTitle>{ticker}</CardTitle>
-          <CardDescription>{company?.name}</CardDescription>
+          <CardTitle>{company?.name}</CardTitle>
+          <CardDescription>{ticker}</CardDescription>
         </div>
       </CardHeader>
       <CardContent className='px-2 sm:p-6'>
@@ -157,27 +157,27 @@ export const InteractiveStockChart: FC<InteractiveStockChartProps> = ({
                     />
                   }
                 />
-                <Line
-                  type='monotone'
-                  dataKey='high'
-                  stroke={chartConfig.high.color}
-                  strokeWidth={2}
-                  dot={false}
-                />
+                {/*<Line*/}
+                {/*  type='monotone'*/}
+                {/*  dataKey='high'*/}
+                {/*  stroke={chartConfig.high.color}*/}
+                {/*  strokeWidth={2}*/}
+                {/*  dot={false}*/}
+                {/*/>*/}
                 <Line
                   type='monotone'
                   dataKey='close'
-                  stroke={chartConfig.close.color}
+                  stroke={isTrendingUp? chartConfig.close.color : chartConfig.low.color}
                   strokeWidth={2}
                   dot={false}
                 />
-                <Line
-                  type='monotone'
-                  dataKey='low'
-                  stroke={chartConfig.low.color}
-                  strokeWidth={2}
-                  dot={false}
-                />
+                {/*<Line*/}
+                {/*  type='monotone'*/}
+                {/*  dataKey='low'*/}
+                {/*  stroke={chartConfig.low.color}*/}
+                {/*  strokeWidth={2}*/}
+                {/*  dot={false}*/}
+                {/*/>*/}
               </LineChart>
             </ResponsiveContainer>
           </ChartContainer>

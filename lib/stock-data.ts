@@ -4,7 +4,8 @@ interface Company {
 }
 
 export const companies: Company[] = [
-  { name: "Nvidia Corporation", ticker: "NVDA" },
+  { name: "Monero", ticker: "X:XMRUSD" },
+  { name: "Bitcoin", ticker: "X:BTCUSD" },
   { name: "Apple Inc.", ticker: "AAPL" },
   { name: "Microsoft Corporation", ticker: "MSFT" },
   { name: "Amazon.com, Inc.", ticker: "AMZN" },
